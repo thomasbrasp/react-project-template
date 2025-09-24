@@ -1,25 +1,15 @@
-import {Fragment} from "react";
-import {
-    Category,
-    Component,
-    Variant,
-    Palette,
-} from "@react-buddy/ide-toolbox";
+import {Category, Component, Palette, Variant} from "@react-buddy/ide-toolbox";
+import MantinePalette from "@react-buddy/palette-mantine";
 
 export const PaletteTree = () => (
     <Palette>
-        <Category name="Flackey">
-            <Component name="Loader">
-                <Variant>
-                    <ExampleLoaderComponent/>
+        <MantinePalette/>
+        <Category name={"persoonlijk"}>
+            <Component name={"App"}>
+                <Variant name={"default"}>
+                    <div>App</div>
                 </Variant>
             </Component>
         </Category>
     </Palette>
 );
-
-export function ExampleLoaderComponent() {
-    return (
-        <Fragment>Loading...</Fragment>
-    );
-}

@@ -1,15 +1,15 @@
-import {ComponentPreview, Previews} from "@react-buddy/ide-toolbox";
+import {ComponentPreview, Previews} from '@react-buddy/ide-toolbox';
+import App from "../App";
 import {PaletteTree} from "./palette";
-import App from "../App.tsx";
 
 const ComponentPreviews = () => {
     return (
         <Previews palette={<PaletteTree/>}>
-            <ComponentPreview path="/ComponentPreviews">
-                <ComponentPreviews/>
-            </ComponentPreview>
             <ComponentPreview path="/App">
                 <App/>
+            </ComponentPreview>
+            <ComponentPreview path="/ComponentPreviews">
+                <ComponentPreviews/>
             </ComponentPreview>
             <ComponentPreview path="/PaletteTree">
                 <PaletteTree/>
@@ -17,5 +17,6 @@ const ComponentPreviews = () => {
         </Previews>
     );
 };
+
 
 export default ComponentPreviews;
